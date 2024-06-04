@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favourite Live</title>
+<link rel="stylesheet" href="index.css">
+</head>
+
+
+<body>
+
+
+<h3><a href="index.html" class="Homepage">Return to Home Page</a></h3>
+
+<h1 class="Bestdebutalbumn">What is your Favourite Live Perfomance?</h1>
+    
+<div class="LivePerfomances">
+    
+<h3><label class="FavDebutLabel">Favourite Live Performance?</label></h3>
+    
+<form  id="form1" method="POST" 
+action="https://script.google.com/macros/s/AKfycbztdzDiSX1tzftbjWRAO7vRUdEtZcKz023tUJ-u-6QoDJ9-3qbTngx-ZrMGmlrM3WlQPg/exec">
+    
+<select name="favouritelive" id="favouritelive">
+    
+<option value="What's Your Favourite live performance?">What's Your Favourite live performance?</option>
+<option value="Pulp - Common People - Glastonbury">Pulp - Common People - Glastonbury</option>
+<option value="Arctic Monkeys - Mardy Bum - Glastonbury">Arctic Monkeys - Mardy Bum - Glastonbury</option>
+<option value="The Libertines - Time for Heroes - Reading">The Libertines - Time for Heroes - Reading</option>
+<option value="Flourance and Dizzie Rascal - Glastonbury">Flourance and Dizzie Rascal - Glastonbury</option>
+    
+</select>
+    
+<input type="submit" name="submit1" id="submit1">
+    
+</form> 
+
+</div>
+
+</body>
+
+<script>
+    const form = document.querySelector("#form")
+    const submitButton = document.querySelector("#submit")
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbztdzDiSX1tzftbjWRAO7vRUdEtZcKz023tUJ-u-6QoDJ9-3qbTngx-ZrMGmlrM3WlQPg/exec'
+ 
+    form.addEventListener('submit', e => {
+      submitButton.disabled = true
+      e.preventDefault()
+      let requestBody = new FormData(form)
+      fetch(scriptURL, { method: 'POST', body: requestBody})
+        .then(response => {
+           alert('Success!', response)
+           submitButton.disabled = false
+          })
+        .catch(error => {
+        alert('Error!', error.message)
+          submitButton.disabled = false
+ 
+        }
+        )
+    })
+ </script>
+
+</html>
