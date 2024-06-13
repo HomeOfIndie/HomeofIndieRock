@@ -64,22 +64,22 @@
     .bestdebutlink{background-image: url('Arctoc\ M\ WPSIATWIN.jpg'); border-style: solid;
     background-size: 100%; background-position: center ;background-repeat: no-repeat;
     border-color: black; width: auto; border-radius: 15px;
-    height: auto;}
+    height: auto; margin-bottom: 20px;}
     
     .bestliveperflink{background-image: url('up\ the\ bracket.jpg'); border-style: solid;
     background-size: 100%; background-position: center ;background-repeat: no-repeat;
     border-color: black; width: auto; border-radius: 15px;
-    height: auto;}
+    height: auto; margin-bottom: 20px;}
     
     .UnderratedAlbumnlink{background-image: url('TRB\ hotel\ n\ casino.jpg'); border-style: solid;
     background-size: 100%; background-position: center ;background-repeat: no-repeat;
     border-color: black; width: auto; border-radius: 15px;
-    height: auto;}
+    height: auto; margin-bottom: 20px;}
     
     .FavouriteCollaborationsLink{background-image: url('justice-band-cross-wallpaper-preview.jpg'); border-style: solid;
     background-size: 100%; background-position: center ;background-repeat: no-repeat;
     border-color: black; width: auto; border-radius: 15px;
-    height: auto;}
+    height: auto; margin-bottom: 20px;}
     
     .Dashboard{margin-left: 50px ;margin-right: 30px; border-style: solid; border-width: 5px;
     border-color: red; margin-top: 10px;}
