@@ -103,6 +103,9 @@
     .FavouriteDebutAlbumn{background-image: url(justicealbumncover.jpg); border-style: solid;
     border-color: white; text-align: center; border-radius: 20px;
     height: 430px; border-width: 10px; font-size: xx-large;}
+
+    .FavArtistsArtice{background-color: red; text-align: center; border-radius: 20px; 
+    border-color: white; border-width: 5px;}
     
 }
 
