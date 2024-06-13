@@ -104,8 +104,8 @@
     border-color: white; text-align: center; border-radius: 20px;
     height: 430px; border-width: 10px; font-size: xx-large;}
 
-    .FavArtistsArtice{background-color: lightgrey; text-align: center; border-radius: 20px; 
-    border-color: white; border-width: 7px; line-height: 2;}
+    .FavArtistsArtice{background-color: FloralWhite; text-align: center; border-radius: 20px; 
+    border-color: black; border-width: 7px; line-height: 2;}
     
 }
 
@@ -214,5 +214,8 @@
     .FavouriteDebutAlbumn{background-image: url(justicealbumncover.jpg); border-style: solid;
     border-color: white; text-align: center; border-radius: 20px;
     height: 430px; border-width: 10px; font-size: xx-large;}
+
+    .FavArtistsArtice{background-color: FloralWhite; text-align: center; border-radius: 20px; 
+    border-color: black; border-width: 7px; line-height: 2;}
 
 }
