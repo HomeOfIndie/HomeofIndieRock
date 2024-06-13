@@ -28,7 +28,7 @@
     .LinkToRankings{width: 35%; border-style: solid;
     border-radius: 15px; border-color: white; border-width: 5px;
     background-image: url('datanalaytis.jpg');text-align: center;
-    font-family:"Papyrus"; background-size: 100%; background-position: center; background-repeat: no-repeat;
+    font-family:"Papyrus"; background-size: 100%; background-position: center; background-repeat: repeat;
     margin-top: 5%;}
     
     
