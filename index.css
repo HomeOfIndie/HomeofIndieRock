@@ -104,8 +104,8 @@
     border-color: white; text-align: center; border-radius: 20px;
     height: 430px; border-width: 10px; font-size: xx-large;}
 
-    .FavArtistsArtice{background-color: red; text-align: center; border-radius: 20px; 
-    border-color: white; border-width: 5px;}
+    .FavArtistsArtice{background-color: lightgrey; text-align: center; border-radius: 20px; 
+    border-color: white; border-width: 7px; line-height: 2;}
     
 }
 
