@@ -19,8 +19,8 @@
     
 <h3><label class="FavDebutLabel">Favourite Indie Collaborations!</label></h3>
     
-<form  id="form1" method="POST" 
-action="https://script.google.com/macros/s/AKfycbxEibhIHihJtgsyIwNYITkV1e9o3-3l2ivq3INYRKKyGWq09UJY8CDtLfo1gJoYxEpV/exec">
+<form  id="favouriteCollaborations" method="POST" 
+action="https://script.google.com/macros/s/AKfycbytpe3U4Y0hzexOOa3x4Hwj-35sZ8NXLYOC5qzEgzm5ZXFqoFIdoO1C3iLUmcjdUBnU/exec">
     
 <select name="favouriteCollaborations" id="favouritelive">
     
@@ -40,27 +40,23 @@ action="https://script.google.com/macros/s/AKfycbxEibhIHihJtgsyIwNYITkV1e9o3-3l2
 
 </body>
 
+<script src="Google Sheet.js"></script>
+
 <script>
-    const form = document.querySelector("#form")
-    const submitButton = document.querySelector("#submit")
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxEibhIHihJtgsyIwNYITkV1e9o3-3l2ivq3INYRKKyGWq09UJY8CDtLfo1gJoYxEpV/exec'
- 
-    form.addEventListener('submit', e => {
-      submitButton.disabled = true
-      e.preventDefault()
-      let requestBody = new FormData(form)
-      fetch(scriptURL, { method: 'POST', body: requestBody})
-        .then(response => {
-           alert('Success!', response)
-           submitButton.disabled = false
-          })
-        .catch(error => {
-        alert('Error!', error.message)
-          submitButton.disabled = false
- 
-        }
-        )
-    })
- </script>
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbytpe3U4Y0hzexOOa3x4Hwj-35sZ8NXLYOC5qzEgzm5ZXFqoFIdoO1C3iLUmcjdUBnU/exec'
+
+const form = document.forms['favouriteCollaborations']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+
+
+</script>
 
 </html>
