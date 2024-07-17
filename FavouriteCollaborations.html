@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favourite Collaborations!</title>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="vinyl.jpg">
+</head>
+
+
+<body>
+
+
+<h3><a href="index.html" class="Homepage">Return to Home Page</a></h3>
+
+<h1 class="Bestdebutalbumn">What is your Favourite Indie Collaborations?</h1>
+    
+<div class="FavouriteCollabs">
+    
+<h3><label class="FavDebutLabel">Favourite Indie Collaborations!</label></h3>
+    
+<form  id="favouriteCollaborations" method="POST" 
+action="https://script.google.com/macros/s/AKfycbytpe3U4Y0hzexOOa3x4Hwj-35sZ8NXLYOC5qzEgzm5ZXFqoFIdoO1C3iLUmcjdUBnU/exec">
+    
+<select name="favouriteCollaborations" id="favouritelive">
+    
+<option value="What's Your Favourite Collaborations?">What's Your Favourite Collaboration?</option>
+<option value="Justice and Tama Impala">Justice and Tama Impala</option>
+<option value="Julian Casablancas and Daft Punk">Julian Casablancas and Daft Punk</option>   
+<option value="Liam Gallagher and John Squire">Liam Gallagher and John Squire</option> 
+<option value="Justice and Simian">Justice and Simian</option> 
+
+</select>
+    
+<input type="submit" name="submit1" id="submit1">
+    
+</form> 
+
+</div>
+
+</body>
+
+<script src="Google Sheet.js"></script>
+
+<script>
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbytpe3U4Y0hzexOOa3x4Hwj-35sZ8NXLYOC5qzEgzm5ZXFqoFIdoO1C3iLUmcjdUBnU/exec'
+
+const form = document.forms['favouriteCollaborations']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+
+
+</script>
+
+</html>
