@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Debut?</title>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="vinyl.jpg">
+</head>
+
+
+<body>
+
+
+<h3><a href="index.html" class="Homepage">Return to Home Page</a></h3>
+
+<h1 class="Bestdebutalbumn">What is your Favourite Debut Album?</h1>
+    
+<div class="FavouriteDebutAlbumn">
+    
+
+    
+<form  id="FavouriteDebutAlbumn" method="POST" 
+action="https://script.google.com/macros/s/AKfycbxofcBNPvE6JPx91kNHIK4tjOV4blB12DsPNg8e-GlQU2JnZ9eYRyFmJkWaRsdsYGi_/exec">
+
+
+<select name="FavouriteDebutAlbumn" id="FavouriteDebutAlbumn">
+  
+<option value="What's Your Favourite Indie Debut?">What's Your Favourite Indie Debut?</option>
+<option value="The Strokes - Is this It?">The Strokes - Is this It?</option>
+<option value="Arctic Monkeys - WPSIATWIN">Arctic Monkeys - WPSIATWIN</option>
+<option value="The Libertines - Up the Bracket">The Libertines - Up the Bracket</option>
+<option value="Justice - Cross">Justice - Cross</option>
+<option value="Yeah Yeah Yeahs - Fever to Tell">Yeah Yeah Yeahs - Fever to Tell</option>
+<option value="Noel Gallagher HFB - Self-titled">Noel Gallagher HFB - Self-titled</option>
+<option value="Oasis - Definetly Mabye">Oasis - Definetly Mabye</option>
+<option value="The Mysterines - Reeling">The Mysterines - Reeling</option>
+</select>
+    
+<input type="submit" name="submit1" id="submit1">
+    
+
+</form> 
+
+
+
+</body>
+
+<script src="Google Sheet.js"></script>
+
+<script>
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxofcBNPvE6JPx91kNHIK4tjOV4blB12DsPNg8e-GlQU2JnZ9eYRyFmJkWaRsdsYGi_/exec'
+
+const form = document.forms['FavouriteDebutAlbumn']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+
+
+</script>
+
+
+</html>
+
+
