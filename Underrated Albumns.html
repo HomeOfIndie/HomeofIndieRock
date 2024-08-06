@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Underrated Albumns!</title>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="vinyl.jpg">
+</head>
+
+
+<body>
+
+
+<h3><a href="index.html" class="Homepage">Return to Home Page</a></h3>
+
+<h1 class="Bestdebutalbumn">Underrated Albumns!</h1>
+    
+<div class="UnderratedAlbumns">
+    
+    
+<form  id="UnderratedAlbumns" method="POST" 
+action="https://script.google.com/macros/s/AKfycbwVTO-vpW1AFNnU92JsxsGe_ecTAQFBgvTbkC7Q5ae74oAp4XjTMaUeGM3j4FhFhr40sg/exec">
+    
+<select name="UnderratedAlbumns" id="UnderratedAlbumns">
+    
+<option value="What is the most underrated Albumn?">What is the most underrated Albumn?</option>
+<option value="The Libertines - All Quiet on the Eastern esplanade">The Libertines - All Quiet on the Eastern esplanade</option>
+<option value="Arctic Monkeys - TBH&C">Arctic Monkeys - TBH&C</option>
+<option value="Fontaines DC - Skinty Fia">Fontaines DC - Skinty Fia</option>
+<option value="Wunderhorse - Cub">Wunderhorse - Cub</option>
+<option value="The Mysterines - Reeling">The Mysterines - Reeling
+<option value="Justice - Hyperdrama">Justice - HyperDrama</option>
+<option value="Yeah Yeah Yeahs - Cool it Down">Yeah Yeah Yeahs - Cool it Down</option> 
+<option value="The Mysterines - Afraid Of Tommorows">The Mysterines - Afraid Of Tommorows</option> 
+</option> 
+</select>
+    
+<input type="submit" name="submit1" id="submit1">
+    
+</form> 
+
+</div>
+
+</body>
+
+<script src="Google Sheet.js"></script>
+
+<script>
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwVTO-vpW1AFNnU92JsxsGe_ecTAQFBgvTbkC7Q5ae74oAp4XjTMaUeGM3j4FhFhr40sg/exec'
+
+const form = document.forms['UnderratedAlbumns']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+
+
+</script>
+
+</html>

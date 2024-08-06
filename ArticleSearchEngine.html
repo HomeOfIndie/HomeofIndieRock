@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Articles</title>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="vinyl.jpg">
+</head>
+
+<body>
+
+    <br>
+
+    <h3><a href="index.html" class="Homepage">Return to Home Page</a></h3>
+
+    <br>
+
+    <div class="Homepagetitle">
+    
+        <h2>Keep up to Date with Home Of Indie's Articles!</h2>
+    
+    </div>
+
+    <div class="container">
+        <input id="searchbar" 
+               onkeyup="search_animal()" 
+               type="text" name="search" 
+               placeholder="Search Article...">
+
+        <ul id='list'>
+            <li class="animals"><a href="MysterinesWunderhorseArticle.html">Discovering the Mysterines and Wunderhorse</a></li>
+            <li class="animals"><a href="OntheBeachArticle.html">On Redcar Beach Live - Review</a></li>
+            <li class="animals"><a href="FontainesRomance.html">Fontaines D.C - Romance's current releases</a></li>
+        </ul>
+    </div>
+</body>
+
+
+
+
+<script>
+
+function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input = input.toLowerCase();
+    let x = document.getElementsByClassName('animals');
+  
+    for (i = 0; i < x.length; i++) {
+      if (!x[i].innerHTML.toLowerCase().includes(input)) {
+        x[i].style.display = "none";
+      }
+      else {
+        x[i].style.display = "list-item";
+      }
+    }
+  }
+
+
+
+
+
+</script>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+#searchbar {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+#list {
+    list-style: disc;
+    padding: 0;
+    margin: 0;
+    background-image: url(slate\ background.jpg);
+    color: white;
+    text-align: center;
+    border-width: 10px;
+    border-color: white;
+}
+
+.animals {
+    font-size: 1.2em;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.animals:last-child {
+    border-bottom: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+
+</html>
