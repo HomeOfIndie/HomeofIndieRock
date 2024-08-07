@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Favourite Live Performance!</title>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="vinyl.jpg">
+<script src="userenhancingscripts.js"></script>
+</head>
+
+
+<body>
+
+
+  <button type="button" onclick="HomePage()" class="PreviousPage">Home Page</button>
+  <button type="button" onclick="PreviousPage()" class="PreviousPage">Previous Page</button>
+  
+  <br>
+
+<h1 class="Bestdebutalbumn">What is your Favourite Live Perfomance?</h1>
+    
+<div class="LivePerfomances">
+    
+    
+<form  id="favouritelive" method="POST" 
+action="https://script.google.com/macros/s/AKfycbwR04VcuC9MytOjjWh-RPyxsDwtClJ_X0h80HoMqqMJi4DsID3X0vHgOVqafHyyJgMY0A/exec">
+    
+<select name="favouritelive" id="favouritelive">
+    
+<option value="What's Your Favourite live performance?">What's Your Favourite live performance?</option>
+<option value="Pulp - Common People - Glastonbury">Pulp - Common People - Glastonbury</option>
+<option value="Arctic Monkeys - Mardy Bum - Glastonbury">Arctic Monkeys - Mardy Bum - Glastonbury</option>
+<option value="The Libertines - Time for Heroes - Reading">The Libertines - Time for Heroes - Reading</option>
+<option value="Flourance and Dizzie Rascal - Glastonbury">Flourance and Dizzie Rascal - Glastonbury</option>
+    
+</select>
+    
+<input type="submit" name="submit1" id="submit1">
+    
+</form> 
+
+</div>
+
+</body>
+
+<script src="Google Sheet.js"></script>
+
+<script>
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwR04VcuC9MytOjjWh-RPyxsDwtClJ_X0h80HoMqqMJi4DsID3X0vHgOVqafHyyJgMY0A/exec'
+
+const form = document.forms['favouritelive']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+
+
+</script>
+
+</html>
