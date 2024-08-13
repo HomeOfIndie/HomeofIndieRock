@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rank your Favourite Artists!</title>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="vinyl.jpg">
+<script src="userenhancingscripts.js"></script>
+
+</head>
+
+<body>
+<br>
+
+<button type="button" onclick="HomePage()" class="PreviousPage">Home Page</button>
+<button type="button" onclick="PreviousPage()" class="PreviousPage">Previous Page</button>
+
+<br>
+<br>
+
+<div class = "Homepagetitle">
+
+<h1>Create your own Playlist and add to our 'Top 5 Tunes' Page</h1>
+
+</div>
+
+<br>
+
+<div class="container">
+<h2>Create Your Own 5 Song Playlist</h2>
+<br>
+<input type="text" id="taskInput" placeholder="Add a song...">
+<br>
+<button onclick="addTask()">Add to Playlist</button>
+<button onclick="removeTask()">Clear Playlist</button>
+<button onclick="saveplayist()">Download Playlist</button>
+<button onclick="saveList()">Share Playlist to our 'Top 5 Tunes Page'</button>
+<br>
+<ul id="taskList"></ul>
+</div>
+
+
+
+</body>
+
+<style>
+
+.container {
+max-width: 400px;
+margin: 0 auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+ul {
+list-style-type: none;
+padding: 0;
+}
+li {
+padding: 8px;
+margin: 5px 0;
+background: #f4f4f4;
+border: 1px solid #ddd;
+border-radius: 3px;
+}
+button {
+margin-left: 10px;
+background-color: lightgrey;
+margin-bottom: 5px;
+font-weight: bolder;
+font-family: 'Times New Roman', Times, serif;
+border-radius: 5px;
+width: max-content;
+cursor: pointer;
+}
+
+.container{background-color: beige;
+border-style: solid;
+border-radius: 5px;
+border-width: 5px;
+border-color: black;}
+
+
+</style>
+
+
+
+
+</html>
