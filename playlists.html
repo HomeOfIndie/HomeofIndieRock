@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playlists</title>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="vinyl.jpg">
+<script src="userenhancingscripts.js"></script>
+</head>
+<body>
+<button type="button" onclick="HomePage()" class="PreviousPage">Home Page</button>
+<button type="button" onclick="PreviousPage()" class="PreviousPage">Previous Page</button>
+
+<br>
+<br>
+
+<h1 class="Bestdebutalbumn">Playlist of the Week - <div id="date">04/08/2024</div></h1>
+
+
+<h3><div class="Playlist" id="scraped-content">
+<pre>
+
+
+
+
+Amyl and the Sniffers - Chewing Gum
+
+
+Bonobo - Expander
+Fat Dog - Wither
+Flying Lotus - Garmonbozia
+Fontaines D.C. - Tracks from 'Romance'
+↑ Jorja Smith - High
+↑ Lex Amor - A7X ft BXKS
+↑ Moonchild Sanelly - Big Booty
+Nick Cave & The Bad Seeds - Long Dark Night
+Rosie Lowe - In My Head
+The Smashing Pumpkins - Sighommi
+Yannis & The Yaw - Rain Can't Reach Us
+
+
+</pre>
+</div></h3>
+
+<h3><div class="Playlist" id="scraped-content">
+
+<pre>
+
+
+
+↑ The Allergies - No Flash (feat. Ohmega Watts)
+
+
+Anna Erhard - Not Rick
+Antony Szmierek - Rafters
+BAKEY - Wouldn't Believe
+Bess Atwell - Where I Left Us
+↑ CLIPZ - New (feat. Chy Cartier)
+Gurriers - Top Of The Bill
+Hinds - Superstar
+Karen Nyame KG ft Tyson - Hold Of Me
+Nilüfer Yanya - Method Actor
+Porridge Radio - Sick Of The Blues
+Thee Sacred Souls - Lucid Girl
+Warmduscher - Fashion Week
+↑ Wunderhorse - Silver
+
+
+
+</pre>
+
+</div></h3>
+
+<h3><div class="Playlist" id="scraped-content">
+
+<pre>
+
+
+
+Buzz' Ayaz - Efdji
+
+
+Chiedu Oraka - Helly Hansen 6
+Dame Area - Si No Es Hoy Cuando Es
+DoFlame - Can't Stand No One
+jasmine.4.t - Skin on Skin
+Man/Woman/Chainsaw - Ode To Clio
+Nick León & Erika De Casier - Bikini
+
+
+
+</pre>
+
+</div></h3>
+
+</pre>
+
+</div></h3>
+
+<div class="returntotop">
+
+<button onclick="toTop()">Return to Top</button>
+
+</div>
+
+
+</body>
+
+<script>
+function displayCurrentDate() {
+const dateDiv = document.getElementById('date');
+const currentDate = new Date();
+dateDiv.innerHTML = currentDate.toDateString();
+}
+
+// Call the function to display the date when the page loads
+window.onload = displayCurrentDate
+</script>
+
+
+</html>
