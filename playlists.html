@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playlists</title>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="vinyl.jpg">
+<script src="userenhancingscripts.js"></script>
+</head>
+<body>
+<button type="button" onclick="HomePage()" class="PreviousPage">Home Page</button>
+<button type="button" onclick="PreviousPage()" class="PreviousPage">Previous Page</button>
+
+<br>
+<br>
+
+<h1 class="Bestdebutalbumn">Playlist of the Week - <div id="date">04/08/2024</div></h1>
+
+
+<h3><div class="Playlist" id="scraped-content">
+<pre>
+
+
+
+Amyl and the Sniffers - Chewing Gum
+
+
+Bonobo - Expander
+Fat Dog - Wither
+Flying Lotus - Garmonbozia
+Fontaines D.C. - Here's The Thing
+Jorja Smith - High
+Manic Street Preachers - Decline & Fall
+Moonchild Sanelly - Big Booty
+Nick Cave & The Bad Seeds - Long Dark Night
+↑ Nilüfer Yanya - Method Actor
+The Smashing Pumpkins - Sighommi
+Yannis & The Yaw - Rain Can't Reach Us
+
+
+</pre>
+</div></h3>
+
+<h3><div class="Playlist" id="scraped-content">
+
+<pre>
+
+
+The Allergies - No Flash (feat. Ohmega Watts)
+
+
+Anna Erhard - Not Rick
+Antony Szmierek - Rafters
+BAKEY - Wouldn't Believe
+Bess Atwell - Where I Left Us
+CLIPZ - New (feat. Chy Cartier)
+Gurriers - Top Of The Bill
+Hinds - Superstar
+Honeyglaze - Pretty Girls
+↑ jasmine.4.t - Skin on Skin
+Moses Sumney - Gold Coast
+OneDa - Let Me In
+Porridge Radio - Sick Of The Blues
+Wunderhorse - Silver
+
+
+</pre>
+
+</div></h3>
+
+<h3><div class="Playlist" id="scraped-content">
+
+<pre>
+
+
+BABii - Scarface
+
+
+Buzz' Ayaz - Efdji
+DoFlame - Can't Stand No One
+Lady Blackbird - Let Not (Your Heart Be Troubled)
+Man/Woman/Chainsaw - Ode To Clio
+Nick León & Erika De Casier - Bikini
+Yaeji - booboo
+
+</pre>
+
+</div></h3>
+
+</pre>
+
+</div></h3>
+
+<div class="returntotop">
+
+<button onclick="toTop()">Return to Top</button>
+
+</div>
+
+
+</body>
+
+<script>
+function displayCurrentDate() {
+const dateDiv = document.getElementById('date');
+const currentDate = new Date();
+dateDiv.innerHTML = currentDate.toDateString();
+}
+
+// Call the function to display the date when the page loads
+window.onload = displayCurrentDate
+</script>
+
+
+</html>
